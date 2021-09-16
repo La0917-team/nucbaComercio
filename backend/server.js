@@ -54,4 +54,3 @@ app.get('*', (req, res) =>
 /*app.get('/', (req, res) => {
     res.send('Server is up and ready to go =)');
 });*/
-
