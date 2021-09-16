@@ -31,7 +31,16 @@ app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
 app.use('api/orders', orderRouter);
 
-// Llamamos a APIs de terceros como Paypal o Stripe
+// Llamamos a APIs de terceros como Paypal, Stripe y Google
+
+// Paypal API
 app.get('/api/config/paypal', (req, res) =>{
-    
-})
+    res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
+});
+
+// Google API
+app.get('api/config/google', (req, res) => {
+    res.send(process.env.GOOGLE_API_KEY || '');
+});
+
+// Llamar a los ficheros estaticos
