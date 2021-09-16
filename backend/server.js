@@ -50,3 +50,8 @@ app.get('*', (req, res) =>
     res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
 );
 
+// Mensaje del servidor corriendo
+/*app.get('/', (req, res) => {
+    res.send('Server is up and ready to go =)');
+});*/
+
