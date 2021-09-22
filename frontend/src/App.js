@@ -10,7 +10,6 @@ function App() {
    
     {/* <FormLogin/> */}
 
-    {/* Sigin y  FormLigin it's same component  */}
     
     
     {/* <FormCreateUser/> */}
