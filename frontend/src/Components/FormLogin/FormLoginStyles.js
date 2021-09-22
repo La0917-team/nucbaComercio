@@ -65,7 +65,7 @@ margin-bottom: 15px;
 
 
 export const ButtonLogIn = styled.button`
-width: 94%;
+width: 90%;
 
 background: #f0c040;
 border: 1px solid #a4a4a4;

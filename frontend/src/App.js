@@ -6,8 +6,10 @@ import FormCreateUser from './Components/FormCreateUser/FormCreateUser'
 function App() {
   return (
     <>
-    <Signin/>
+   <Signin/>
+   
     {/* <FormLogin/> */}
+
     {/* Sigin y  FormLigin it's same component  */}
     
     
