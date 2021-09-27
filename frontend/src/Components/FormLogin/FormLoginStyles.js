@@ -8,7 +8,8 @@ height: auto;
 background-color: #fff;
 display: flex;
 justify-content: center;
-padding-top: 5em;
+padding-top: 7em;
+
 
 `
 
@@ -19,6 +20,11 @@ width: 40%;
 height: auto;
 /* background-color: beige; */
 user-select: none; 
+@media screen and (max-width: 500px) {
+  width: 100%;
+  margin-left: 2%;
+  }
+
 
 `
 

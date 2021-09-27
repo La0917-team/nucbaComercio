@@ -20,6 +20,11 @@ height: auto;
 /* background-color: beige; */
 user-select: none; 
 
+@media screen and (max-width: 500px) {
+  width: 100%;
+  margin-left: 2%;
+  }
+
 `
 
 export const H1FormUser =  styled.h1 `
