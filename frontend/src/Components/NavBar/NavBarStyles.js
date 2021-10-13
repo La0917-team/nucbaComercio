@@ -95,6 +95,14 @@ height: 7vh;
 border: none;
 border-radius: 0 .5rem .5rem 0;
 border-right: none;
+@media screen and (max-width: 800px) {
+  margin-right: 10%;
+
+  }
+  @media screen and (max-width: 500px) {
+  margin-right: 0%;
+
+  }
 
 `
 
@@ -111,7 +119,8 @@ display: flex;
 justify-content: right;
 box-sizing: border-box;
 height: auto;
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 800px) {
   width: 100%;
   max-width: 500px;
   margin-right: 5%;

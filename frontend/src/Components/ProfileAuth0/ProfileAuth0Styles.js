@@ -10,7 +10,7 @@ font-size: 1.2rem;
 font-weight: bold;
 font-family: Helvetica,Arial,sans-serif;
 text-align: center;
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
     height: 31vh;
 }
 `

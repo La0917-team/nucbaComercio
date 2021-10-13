@@ -16,20 +16,28 @@ import {
   LiCartSignIn
 } from "./NavBarStyles";
 import LoginAuth0 from "../LoginAuth0/LoginAuth0";
-
 import LogOutAuth0 from "../LogOutAuth0/LogOutAuth0";
 import ImgLoginAuth from "../ImgLoginAuth/ImgLoginAuth";
+import { Cart, CartContainer } from "../Cart/CartStyles";
+import * as hamburguerActions from "../../redux/hamburguer/hamburguerActions"
+import { useDispatch } from "react-redux";
 
 
 function NavBar() {
+  
+  
   const {isAuthenticated} = useAuth0();
+  const dispatch = useDispatch();
+  const handleToggle = () => {
+    dispatch(hamburguerActions.toggleHamburguerHidden())
+  }
   return (
     <ContainerNavBar>
 
       <ContainerBurguerAndH1>
 
         <ContainerBurguerNavBar>
-          <IconBurguerNavBar />
+          <IconBurguerNavBar onClick={handleToggle} />
         </ContainerBurguerNavBar>
 
         <H1Amazona><a style={{display:"line", fontFamily: "'Satisfy', cursive", paddingTop:"1%"}}>A</a>mazona</H1Amazona>
@@ -46,7 +54,7 @@ function NavBar() {
 
 
       <ContainerCartSignIn>
-        <LiCartSignIn>Cart</LiCartSignIn>
+        <LiCartSignIn>Cart</LiCartSignIn><CartContainer><Cart></Cart></CartContainer>
         {isAuthenticated ? (<LogOutAuth0/>) : (<LoginAuth0/>)}
         {isAuthenticated && <ImgLoginAuth/>}
        
