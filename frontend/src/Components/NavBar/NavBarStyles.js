@@ -49,17 +49,19 @@ cursor: pointer;
 color: #fff;
 font-family: Helvetica,Arial,sans-serif;
 font-weight: bold;
-margin-top: 1%;
+margin-top: 0;
+margin-bottom: 0;
 `
 
 
-export const ContainerInputAndSearch = styled.div`
+export const ContainerInputAndSearch = styled.form`
 display: flex;
 width: 30%;
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   width: 100%;
-  max-width: 500px
+  max-width: 500px;
+  margin-right: 3%;
   }
 
 
@@ -111,7 +113,8 @@ box-sizing: border-box;
 height: auto;
 @media screen and (max-width: 500px) {
   width: 100%;
-  max-width: 500px
+  max-width: 500px;
+  margin-right: 5%;
   }
 
 

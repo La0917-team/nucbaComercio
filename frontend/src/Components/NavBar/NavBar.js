@@ -1,4 +1,5 @@
 import React from "react";
+import { useAuth0 } from '@auth0/auth0-react';
 import {
   ContainerBurguerAndH1,
   ContainerBurguerNavBar,
@@ -14,8 +15,14 @@ import {
   ContainerCartSignIn,
   LiCartSignIn
 } from "./NavBarStyles";
+import LoginAuth0 from "../LoginAuth0/LoginAuth0";
+
+import LogOutAuth0 from "../LogOutAuth0/LogOutAuth0";
+import ImgLoginAuth from "../ImgLoginAuth/ImgLoginAuth";
+
 
 function NavBar() {
+  const {isAuthenticated} = useAuth0();
   return (
     <ContainerNavBar>
 
@@ -25,12 +32,12 @@ function NavBar() {
           <IconBurguerNavBar />
         </ContainerBurguerNavBar>
 
-        <H1Amazona>amazona</H1Amazona>
+        <H1Amazona><a style={{display:"line", fontFamily: "'Satisfy', cursive", paddingTop:"1%"}}>A</a>mazona</H1Amazona>
 
       </ContainerBurguerAndH1>
 
-      <ContainerInputAndSearch>
-          <InputSearch/>
+      <ContainerInputAndSearch type='sumbit'>
+          <InputSearch type='text' required/>
 
           <ContainerSearch type='submit'>
               <IconSearch/>
@@ -40,7 +47,9 @@ function NavBar() {
 
       <ContainerCartSignIn>
         <LiCartSignIn>Cart</LiCartSignIn>
-        <LiCartSignIn>Sign In</LiCartSignIn>
+        {isAuthenticated ? (<LogOutAuth0/>) : (<LoginAuth0/>)}
+        {isAuthenticated && <ImgLoginAuth/>}
+       
       </ContainerCartSignIn>
 
 

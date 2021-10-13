@@ -1,15 +1,16 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Signin from './Components/Signin/Signin';
+
 import FormLogin from './Components/FormLogin/FormLogin'
 import FormCreateUser from './Components/FormCreateUser/FormCreateUser'
 import NavBar from './Components/NavBar/NavBar';
+import ProfileAuth0 from './Components/ProfileAuth0/ProfileAuth0';
 
 
 function App() {
   return (
     <>
+    
     <NavBar/>
-   {/* <Signin/> */}
+    <ProfileAuth0/>
    
     <FormLogin/>
 
@@ -18,7 +19,7 @@ function App() {
     <FormCreateUser/>
     </>
     
-  )
-}
-
+    )
+  }
+  
 export default App;
